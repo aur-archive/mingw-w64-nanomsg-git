@@ -1,0 +1,13 @@
+--- nanomsg.orig/src/CMakeLists.txt	2014-03-30 15:49:24.572733159 +0200
++++ nanomsg/src/CMakeLists.txt	2014-03-30 15:50:20.193520125 +0200
+@@ -255,8 +255,8 @@ add_definitions (-DNN_EXPORTS)
+ add_definitions (-DNN_USE_LITERAL_IFADDR)
+ 
+ target_link_libraries (nanomsg ws2_32)
+-target_link_libraries (nanomsg Mswsock.lib)
+-target_link_libraries (nanomsg Advapi32.lib)
++target_link_libraries (nanomsg mswsock)
++target_link_libraries (nanomsg advapi32)
+ 
+ install(TARGETS nanomsg
+     ARCHIVE DESTINATION lib
